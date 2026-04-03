@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#4b5563"/>
+    </marker>
+    <marker id="triangle" markerWidth="16" markerHeight="16" refX="12" refY="8" orient="auto">
+      <path d="M0,8 L12,0 L12,16 Z" fill="#ffffff" stroke="#4b5563" stroke-width="1.5"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1280" height="760" fill="#f8fafc"/>
+  <text x="640" y="42" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">
+    Chain of Responsibility UML
+  </text>
+
+  <g>
+    <rect x="450" y="80" width="380" height="150" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <text x="640" y="114" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">&lt;&lt;abstract&gt;&gt;</text>
+    <text x="640" y="142" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="700" fill="#0f172a">DefenseHandler</text>
+    <line x1="470" y1="156" x2="810" y2="156" stroke="#7c3aed" stroke-width="1.5"/>
+    <text x="472" y="182" font-family="Consolas, monospace" font-size="16" fill="#0f172a">- next: DefenseHandler</text>
+    <line x1="470" y1="194" x2="810" y2="194" stroke="#7c3aed" stroke-width="1.5"/>
+    <text x="472" y="218" font-family="Consolas, monospace" font-size="16" fill="#0f172a">+ setNext(next): DefenseHandler</text>
+    <text x="472" y="240" font-family="Consolas, monospace" font-size="16" fill="#0f172a">+ handle(incomingDamage, target): void</text>
+  </g>
+
+  <g>
+    <rect x="60" y="320" width="250" height="150" rx="12" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+    <text x="185" y="354" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#0f172a">DodgeHandler</text>
+    <line x1="80" y1="366" x2="290" y2="366" stroke="#334155" stroke-width="1.5"/>
+    <text x="82" y="392" font-family="Consolas, monospace" font-size="15" fill="#0f172a">- dodgeChance: double</text>
+    <text x="82" y="412" font-family="Consolas, monospace" font-size="15" fill="#0f172a">- random: Random</text>
+    <line x1="80" y1="424" x2="290" y2="424" stroke="#334155" stroke-width="1.5"/>
+    <text x="82" y="448" font-family="Consolas, monospace" font-size="15" fill="#0f172a">+ handle(...)</text>
+  </g>
+
+  <g>
+    <rect x="360" y="320" width="250" height="150" rx="12" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+    <text x="485" y="354" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#0f172a">BlockHandler</text>
+    <line x1="380" y1="366" x2="590" y2="366" stroke="#334155" stroke-width="1.5"/>
+    <text x="382" y="392" font-family="Consolas, monospace" font-size="15" fill="#0f172a">- blockPercent: double</text>
+    <line x1="380" y1="424" x2="590" y2="424" stroke="#334155" stroke-width="1.5"/>
+    <text x="382" y="448" font-family="Consolas, monospace" font-size="15" fill="#0f172a">+ handle(...)</text>
+  </g>
+
+  <g>
+    <rect x="670" y="320" width="250" height="150" rx="12" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+    <text x="795" y="354" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#0f172a">ArmorHandler</text>
+    <line x1="690" y1="366" x2="900" y2="366" stroke="#334155" stroke-width="1.5"/>
+    <text x="692" y="392" font-family="Consolas, monospace" font-size="15" fill="#0f172a">- armorValue: int</text>
+    <line x1="690" y1="424" x2="900" y2="424" stroke="#334155" stroke-width="1.5"/>
+    <text x="692" y="448" font-family="Consolas, monospace" font-size="15" fill="#0f172a">+ handle(...)</text>
+  </g>
+
+  <g>
+    <rect x="970" y="320" width="250" height="150" rx="12" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+    <text x="1095" y="354" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#0f172a">HpHandler</text>
+    <line x1="990" y1="366" x2="1200" y2="366" stroke="#334155" stroke-width="1.5"/>
+    <text x="992" y="392" font-family="Consolas, monospace" font-size="15" fill="#0f172a">terminal handler</text>
+    <line x1="990" y1="424" x2="1200" y2="424" stroke="#334155" stroke-width="1.5"/>
+    <text x="992" y="448" font-family="Consolas, monospace" font-size="15" fill="#0f172a">+ handle(...)</text>
+  </g>
+
+  <g>
+    <rect x="70" y="560" width="320" height="130" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="230" y="594" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#0f172a">TournamentEngine</text>
+    <text x="230" y="620" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#334155">&lt;&lt;Chain Builder / Client&gt;&gt;</text>
+    <line x1="90" y1="632" x2="370" y2="632" stroke="#d97706" stroke-width="1.5"/>
+    <text x="92" y="656" font-family="Consolas, monospace" font-size="15" fill="#0f172a">+ runTournament()</text>
+  </g>
+
+  <g>
+    <rect x="910" y="560" width="300" height="130" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="1060" y="594" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#0f172a">ArenaFighter</text>
+    <text x="1060" y="620" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#334155">&lt;&lt;Target&gt;&gt;</text>
+    <line x1="930" y1="632" x2="1190" y2="632" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="932" y="656" font-family="Consolas, monospace" font-size="15" fill="#0f172a">+ takeDamage(amount)</text>
+  </g>
+
+  <line x1="185" y1="320" x2="560" y2="230" stroke="#4b5563" stroke-width="2" stroke-dasharray="8 6" marker-end="url(#triangle)"/>
+  <line x1="485" y1="320" x2="620" y2="230" stroke="#4b5563" stroke-width="2" stroke-dasharray="8 6" marker-end="url(#triangle)"/>
+  <line x1="795" y1="320" x2="680" y2="230" stroke="#4b5563" stroke-width="2" stroke-dasharray="8 6" marker-end="url(#triangle)"/>
+  <line x1="1095" y1="320" x2="740" y2="230" stroke="#4b5563" stroke-width="2" stroke-dasharray="8 6" marker-end="url(#triangle)"/>
+
+  <line x1="310" y1="395" x2="360" y2="395" stroke="#4b5563" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="610" y1="395" x2="670" y2="395" stroke="#4b5563" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="920" y1="395" x2="970" y2="395" stroke="#4b5563" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="485" y="382" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#334155">setNext()</text>
+  <text x="795" y="382" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#334155">setNext()</text>
+  <text x="945" y="382" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#334155">setNext()</text>
+
+  <line x1="390" y1="610" x2="170" y2="470" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="370" y="530" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#334155">builds chain and starts with handle(...)</text>
+
+  <line x1="1095" y1="470" x2="1060" y2="560" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1120" y="525" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#334155">takeDamage()</text>
+</svg>

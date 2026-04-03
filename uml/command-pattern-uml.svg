@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#4b5563"/>
+    </marker>
+    <marker id="triangle" markerWidth="16" markerHeight="16" refX="12" refY="8" orient="auto">
+      <path d="M0,8 L12,0 L12,16 Z" fill="#ffffff" stroke="#4b5563" stroke-width="1.5"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="760" fill="#f8fafc"/>
+  <text x="600" y="42" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#0f172a">
+    Command Pattern UML
+  </text>
+
+  <g>
+    <rect x="440" y="80" width="320" height="120" rx="12" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+    <text x="600" y="110" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">&lt;&lt;interface&gt;&gt;</text>
+    <text x="600" y="136" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#0f172a">ActionCommand</text>
+    <line x1="460" y1="148" x2="740" y2="148" stroke="#0284c7" stroke-width="1.5"/>
+    <text x="462" y="172" font-family="Consolas, monospace" font-size="16" fill="#0f172a">+ execute(): void</text>
+    <text x="462" y="192" font-family="Consolas, monospace" font-size="16" fill="#0f172a">+ undo(): void</text>
+    <text x="462" y="212" font-family="Consolas, monospace" font-size="16" fill="#0f172a">+ getDescription(): String</text>
+  </g>
+
+  <g>
+    <rect x="90" y="300" width="280" height="160" rx="12" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+    <text x="230" y="334" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#0f172a">AttackCommand</text>
+    <line x1="110" y1="346" x2="350" y2="346" stroke="#334155" stroke-width="1.5"/>
+    <text x="112" y="372" font-family="Consolas, monospace" font-size="15" fill="#0f172a">- target: ArenaOpponent</text>
+    <text x="112" y="392" font-family="Consolas, monospace" font-size="15" fill="#0f172a">- attackPower: int</text>
+    <text x="112" y="412" font-family="Consolas, monospace" font-size="15" fill="#0f172a">- damageDealt: int</text>
+    <line x1="110" y1="424" x2="350" y2="424" stroke="#334155" stroke-width="1.5"/>
+    <text x="112" y="448" font-family="Consolas, monospace" font-size="15" fill="#0f172a">+ execute()</text>
+    <text x="112" y="468" font-family="Consolas, monospace" font-size="15" fill="#0f172a">+ undo()</text>
+  </g>
+
+  <g>
+    <rect x="460" y="300" width="280" height="160" rx="12" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+    <text x="600" y="334" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#0f172a">HealCommand</text>
+    <line x1="480" y1="346" x2="720" y2="346" stroke="#334155" stroke-width="1.5"/>
+    <text x="482" y="372" font-family="Consolas, monospace" font-size="15" fill="#0f172a">- target: ArenaFighter</text>
+    <text x="482" y="392" font-family="Consolas, monospace" font-size="15" fill="#0f172a">- healAmount: int</text>
+    <text x="482" y="412" font-family="Consolas, monospace" font-size="15" fill="#0f172a">- actualHealApplied: int</text>
+    <line x1="480" y1="424" x2="720" y2="424" stroke="#334155" stroke-width="1.5"/>
+    <text x="482" y="448" font-family="Consolas, monospace" font-size="15" fill="#0f172a">+ execute()</text>
+    <text x="482" y="468" font-family="Consolas, monospace" font-size="15" fill="#0f172a">+ undo()</text>
+  </g>
+
+  <g>
+    <rect x="830" y="300" width="280" height="160" rx="12" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+    <text x="970" y="334" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#0f172a">DefendCommand</text>
+    <line x1="850" y1="346" x2="1090" y2="346" stroke="#334155" stroke-width="1.5"/>
+    <text x="852" y="372" font-family="Consolas, monospace" font-size="15" fill="#0f172a">- target: ArenaFighter</text>
+    <text x="852" y="392" font-family="Consolas, monospace" font-size="15" fill="#0f172a">- dodgeBoost: double</text>
+    <text x="852" y="412" font-family="Consolas, monospace" font-size="15" fill="#0f172a">- appliedBoost: double</text>
+    <line x1="850" y1="424" x2="1090" y2="424" stroke="#334155" stroke-width="1.5"/>
+    <text x="852" y="448" font-family="Consolas, monospace" font-size="15" fill="#0f172a">+ execute()</text>
+    <text x="852" y="468" font-family="Consolas, monospace" font-size="15" fill="#0f172a">+ undo()</text>
+  </g>
+
+  <g>
+    <rect x="60" y="560" width="300" height="140" rx="12" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="210" y="594" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#0f172a">ActionQueue</text>
+    <text x="210" y="620" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#334155">&lt;&lt;Invoker&gt;&gt;</text>
+    <line x1="80" y1="632" x2="340" y2="632" stroke="#d97706" stroke-width="1.5"/>
+    <text x="82" y="656" font-family="Consolas, monospace" font-size="15" fill="#0f172a">- queue: List&lt;ActionCommand&gt;</text>
+    <text x="82" y="678" font-family="Consolas, monospace" font-size="15" fill="#0f172a">+ enqueue(cmd)</text>
+  </g>
+
+  <g>
+    <rect x="430" y="560" width="320" height="140" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="590" y="594" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#0f172a">ArenaFighter</text>
+    <text x="590" y="620" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#334155">&lt;&lt;Receiver&gt;&gt;</text>
+    <line x1="450" y1="632" x2="730" y2="632" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="452" y="656" font-family="Consolas, monospace" font-size="15" fill="#0f172a">+ heal(amount)</text>
+    <text x="452" y="678" font-family="Consolas, monospace" font-size="15" fill="#0f172a">+ modifyDodgeChance(delta)</text>
+  </g>
+
+  <g>
+    <rect x="820" y="560" width="320" height="140" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="980" y="594" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="700" fill="#0f172a">ArenaOpponent</text>
+    <text x="980" y="620" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#334155">&lt;&lt;Receiver&gt;&gt;</text>
+    <line x1="840" y1="632" x2="1120" y2="632" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="842" y="656" font-family="Consolas, monospace" font-size="15" fill="#0f172a">+ takeDamage(amount)</text>
+    <text x="842" y="678" font-family="Consolas, monospace" font-size="15" fill="#0f172a">+ restoreHealth(amount)</text>
+  </g>
+
+  <line x1="230" y1="300" x2="520" y2="200" stroke="#4b5563" stroke-width="2" stroke-dasharray="8 6" marker-end="url(#triangle)"/>
+  <line x1="600" y1="300" x2="600" y2="200" stroke="#4b5563" stroke-width="2" stroke-dasharray="8 6" marker-end="url(#triangle)"/>
+  <line x1="970" y1="300" x2="680" y2="200" stroke="#4b5563" stroke-width="2" stroke-dasharray="8 6" marker-end="url(#triangle)"/>
+
+  <line x1="360" y1="620" x2="430" y2="620" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="392" y="606" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#334155">manages queue of commands</text>
+
+  <line x1="290" y1="460" x2="875" y2="560" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="625" y="520" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#334155">execute() attacks receiver</text>
+
+  <line x1="600" y1="460" x2="590" y2="560" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="670" y="520" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#334155">execute() / undo()</text>
+
+  <line x1="970" y1="460" x2="640" y2="560" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="820" y="520" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#334155">execute() / undo()</text>
+</svg>
